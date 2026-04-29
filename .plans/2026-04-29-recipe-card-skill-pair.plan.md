@@ -43,7 +43,7 @@ the existing 171 recipe-cards against a single shared rubric.
   `check-recipe-card/scripts/audit_recipe_card.py` runnable on a single
   file or a folder, exiting non-zero on any deterministic finding.
 - `RESOLVER.md` updated to point new recipe filing through
-  `/build:build-recipe-card`.
+  `/build-recipe-card`.
 - `AGENTS.md` updated to register the pair in working agreements.
 - End-to-end validation: build one new recipe-card from a real source,
   audit it clean; run audit on the existing vault and confirm the
@@ -122,8 +122,8 @@ self-contained.
 ### Modify
 
 - `RESOLVER.md` — add a note that new recipe-card filing goes through
-  `/build:build-recipe-card`; the audit goes through
-  `/build:check-recipe-card`. Filing table is unchanged (still routes by
+  `/build-recipe-card`; the audit goes through
+  `/check-recipe-card`. Filing table is unchanged (still routes by
   meal-type folder).
 - `AGENTS.md` — register the pair in the *Working Agreements* section
   with one bullet pointing at the two slash commands.
@@ -279,8 +279,8 @@ Clean fixture under `/tmp/` exits 0.
 **Status:** completed.
 
 - In `RESOLVER.md`, append a note under the *Notes* section pointing
-  out that new recipe filing goes through `/build:build-recipe-card`
-  and audit goes through `/build:check-recipe-card`. Do not modify the
+  out that new recipe filing goes through `/build-recipe-card`
+  and audit goes through `/check-recipe-card`. Do not modify the
   filing or context tables — folders are unchanged.
 - In `AGENTS.md`, add one bullet under *Working Agreements* registering
   the pair (one line each for build and check, with one-sentence
@@ -404,7 +404,7 @@ marked complete.
      read-back).
 
 6. **Docs registered.**
-   - `grep -c '/build:build-recipe-card' RESOLVER.md AGENTS.md` returns
+   - `grep -c '/build-recipe-card' RESOLVER.md AGENTS.md` returns
      ≥ 2 across the two files.
 
 7. **Branch is clean.**

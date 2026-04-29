@@ -81,7 +81,7 @@ Video/audio transcripts are explicitly out of scope.
 6. **Filing.** Write to `<folder>/<kebab-case-stem>.md` per
    `RESOLVER.md`. If `meal-type` is genuinely ambiguous from source,
    file under `basics/` with `needs-review` (matches existing triage).
-7. **Handoff.** Offer `/build:check-recipe-card <new-file>` to audit the
+7. **Handoff.** Offer `/check-recipe-card <new-file>` to audit the
    just-written recipe-card.
 
 ## `check-recipe-card` behavior
@@ -162,8 +162,8 @@ vault's structured frontmatter format. Update `primitive-routing.md`:
   recipe-cards as content artifacts that record (not invent) recipes,
   with structured frontmatter and cited provenance.
 - Extend the *Routing Test* with a branch for "user pasted a
-  URL/image/PDF of a recipe" → `/build:build-recipe-card`.
-- Add route lines: `/build:build-recipe-card` and `/build:check-recipe-card`.
+  URL/image/PDF of a recipe" → `/build-recipe-card`.
+- Add route lines: `/build-recipe-card` and `/check-recipe-card`.
 
 ## Acceptance criteria
 
@@ -175,7 +175,7 @@ A reasonable user with this pair installed can:
    recipe-card tagged `low-credibility`.
 3. Paste a cookbook page photo missing a quantity and get a recipe-card
    with `TODO:` markers plus `needs-review` tag.
-4. Run `/build:check-recipe-card` over the whole vault and get a categorized
+4. Run `/check-recipe-card` over the whole vault and get a categorized
    report of findings (broken descriptions, mis-filed files,
    low-credibility sources, duplicates).
 5. Run the repair loop and have kebab-case renames plus folder moves
