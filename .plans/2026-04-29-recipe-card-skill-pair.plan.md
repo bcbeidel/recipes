@@ -334,7 +334,9 @@ at `.plans/2026-04-29-recipe-card-skill-pair.notes.md`.
   `.plans/2026-04-29-recipe-card-skill-pair.notes.md` (not the raw
   audit JSON).
 
-### Task 7 — Split combined playbook entry to match audit-dimensions
+### Task 7 — Split combined playbook entry to match audit-dimensions <!-- sha:5db8760 -->
+
+**Status:** completed.
 
 Added during validation: the cross-artifact consistency check failed
 because Task 1 drafted a combined `### body-has-ingredients /
