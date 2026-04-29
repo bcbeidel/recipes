@@ -43,3 +43,9 @@ All recipe files carry frontmatter (`aliases:`, `tags:`, `meal-type:`,
 
 Files in `basics/` that lack `meal-type:` are awaiting triage. Once a
 meal-type is assigned, move the file to the matching folder.
+
+New recipe-card filing goes through `/build:build-recipe-card` —
+the skill drafts the card from a cited URL/image/PDF/text, validates
+against the shared rubric, and writes to the meal-type folder per the
+filing table above. Auditing existing cards (single file, folder, or
+the whole vault) goes through `/build:check-recipe-card`.
