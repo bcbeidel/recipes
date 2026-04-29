@@ -10,8 +10,10 @@
 !.obsidian/templates.json
 !.obsidian/graph.json
 
-# Claude Code project-local settings (permission grants, etc.)
-.claude/
+# Claude Code project-local settings (permission grants, etc.).
+# Re-include .claude/skills/ — those are project-scoped and shared.
+.claude/*
+!.claude/skills/
 
 # OS / editor cruft
 .DS_Store

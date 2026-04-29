@@ -137,7 +137,9 @@ None.
 Tasks are sequential. Each task ends with a single git commit on the
 `feat/recipe-card-skill-pair` branch. Task 0 sets up the branch.
 
-### Task 0 — Branch and prep
+### Task 0 — Branch and prep <!-- sha:00be7dc -->
+
+**Status:** completed.
 
 - Create branch `feat/recipe-card-skill-pair` from `main`.
 - Confirm `.claude/skills/` is writable (create the parent if absent;
@@ -147,7 +149,9 @@ Tasks are sequential. Each task ends with a single git commit on the
   `test -d .claude` succeeds.
 - Commit: `chore: branch for recipe-card skill pair`
 
-### Task 1 — Invoke `/build:build-skill-pair recipe-card`
+### Task 1 — Invoke `/build:build-skill-pair recipe-card` <!-- no-commit: rolls into Task 2 -->
+
+**Status:** completed. Five artifacts written to `plugins/build/...`; commit folded into Task 2 per plan.
 
 Dogfood the toolkit's primitive-pair builder to produce the five
 artifacts. The skill writes to its hardcoded `plugins/build/...`
@@ -190,6 +194,11 @@ locations inside the cwd; that's expected and gets fixed in Task 2.
   `plugins/` tree should never appear in version control.
 
 ### Task 2 — Relocate to project-scoped paths and patch references
+
+**In-flight amendment:** `.claude/` was broadly gitignored
+(`.claude/`). Amended `.gitignore` to mirror the `.obsidian/` pattern
+(`.claude/*` + `!.claude/skills/`) so project-scoped skills land in
+version control while `.claude/settings.local.json` stays local.
 
 - Create destination skeleton:
   - `.claude/skills/_shared/`
