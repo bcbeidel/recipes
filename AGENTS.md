@@ -18,3 +18,8 @@ Before filing new recipes or loading context beyond a skill's eager `references:
   advice, prefer established cookbooks, test kitchens (NYT Cooking,
   Serious Eats, ATK, Bon Appétit), or named authors with track records.
   Cite the source. Avoid uncredited blog content and AI-generated recipes.
+- **Use the recipe-card skill pair.** New recipes go through
+  `/build:build-recipe-card`, which drafts a card from a cited source
+  and validates it against the shared rubric. Auditing existing cards
+  goes through `/build:check-recipe-card` (Tier-1 deterministic +
+  opt-in Tier-2/3 judgment + opt-in repair loop).
