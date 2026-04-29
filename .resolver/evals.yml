@@ -1,0 +1,39 @@
+cases:
+  # Filing — positive (one per row)
+  - prompt: "save this chicken parm recipe"
+    expected_filing: dinner/
+  - prompt: "filing a banana pancake recipe"
+    expected_filing: breakfast/
+  - prompt: "lunch recipe — chickpea salad with tahini"
+    expected_filing: lunch/
+  - prompt: "save this roasted brussels sprouts side dish"
+    expected_filing: sides/
+  - prompt: "where do chocolate chip cookies go"
+    expected_filing: desserts/
+  - prompt: "save this spinach artichoke dip for hosting"
+    expected_filing: appetizers/
+  - prompt: "homemade marinara sauce recipe"
+    expected_filing: basics/
+
+  # Context — positive (one per row)
+  - prompt: "help me plan dinners for the week"
+    expected_context: [_index.md, dinner/, sides/]
+  - prompt: "what can I cook in 30 minutes tonight"
+    expected_context: [_index.md, dinner/, basics/]
+  - prompt: "I want to bake something sweet today"
+    expected_context: [desserts/, breakfast/]
+  - prompt: "hosting a dinner party — need appetizer ideas"
+    expected_context: [appetizers/, basics/]
+  - prompt: "this recipe doesn't have meal-type filled in"
+    expected_context: [_index.md, basics/]
+
+  # Negative (overlap risk)
+  - prompt: "filing a fresh pasta dough recipe"
+    expected_filing: basics/
+    not_expected_filing: dinner/
+  - prompt: "save a granola recipe"
+    expected_filing: breakfast/
+    not_expected_filing: desserts/
+  - prompt: "save this minestrone soup recipe"
+    expected_filing: dinner/
+    not_expected_filing: basics/

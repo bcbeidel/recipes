@@ -1,0 +1,18 @@
+# Obsidian: ignore the whole vault config, then re-include the parts
+# that should travel with the repo. workspace.json and per-machine
+# state stay local.
+.obsidian/*
+!.obsidian/app.json
+!.obsidian/appearance.json
+!.obsidian/core-plugins.json
+!.obsidian/community-plugins.json
+!.obsidian/hotkeys.json
+!.obsidian/templates.json
+!.obsidian/graph.json
+
+# Claude Code project-local settings (permission grants, etc.)
+.claude/
+
+# OS / editor cruft
+.DS_Store
+.trash/
