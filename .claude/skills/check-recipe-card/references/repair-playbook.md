@@ -65,14 +65,21 @@ is in `audit-dimensions.md` (sibling to this file).
   per `transform_recipes.py:strip_curly`). Display alias keeps the
   ASCII `'`.
 
-### body-has-ingredients / body-has-preparation
+### body-has-ingredients
 
-- **Diagnosis:** Heading has wrong text (`## Method`,
-  `## Instructions`) or is missing entirely.
-- **Fix:** Replace heading text with `## Ingredients` or
-  `## Preparation`. **If the section is missing entirely**, surface
-  a TODO at the top of the body and tag `needs-review` — do not
-  invent steps or ingredients.
+- **Diagnosis:** `## Ingredients` heading has wrong text (`## Items`,
+  `## What you'll need`) or is missing entirely.
+- **Fix:** Replace the offending heading text with `## Ingredients`.
+  **If the section is missing entirely**, surface a TODO at the top of
+  the body and tag `needs-review` — do not invent ingredients.
+
+### body-has-preparation
+
+- **Diagnosis:** `## Preparation` heading has wrong text (`## Method`,
+  `## Instructions`, `## Steps`) or is missing entirely.
+- **Fix:** Replace the offending heading text with `## Preparation`.
+  **If the section is missing entirely**, surface a TODO at the top of
+  the body and tag `needs-review` — do not invent steps.
 
 ### body-section-order
 

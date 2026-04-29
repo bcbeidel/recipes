@@ -334,6 +334,25 @@ at `.plans/2026-04-29-recipe-card-skill-pair.notes.md`.
   `.plans/2026-04-29-recipe-card-skill-pair.notes.md` (not the raw
   audit JSON).
 
+### Task 7 — Split combined playbook entry to match audit-dimensions
+
+Added during validation: the cross-artifact consistency check failed
+because Task 1 drafted a combined `### body-has-ingredients /
+body-has-preparation` entry in `repair-playbook.md`, while
+`audit-dimensions.md` lists them as two separate dimensions. The plan's
+validation §3 diff requires the headers to match exactly.
+
+- In `.claude/skills/check-recipe-card/references/repair-playbook.md`,
+  split the combined entry into two separate `### body-has-ingredients`
+  and `### body-has-preparation` entries — same diagnosis/fix prose,
+  one entry each.
+- Verify: `diff <(grep '^### '
+  .claude/skills/check-recipe-card/references/audit-dimensions.md
+  | sort) <(grep '^### '
+  .claude/skills/check-recipe-card/references/repair-playbook.md
+  | sort)` exits 0.
+- Commit: `fix: split combined playbook entry to match audit-dimensions`
+
 ## Validation
 
 Run after Task 6 completes. All criteria must pass before the plan is
