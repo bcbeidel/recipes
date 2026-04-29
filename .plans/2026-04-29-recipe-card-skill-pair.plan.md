@@ -2,7 +2,7 @@
 name: Recipe-card skill pair (build + check)
 description: Scaffold a project-scoped primitive-pair under .claude/skills/ that records recipe-cards from URLs/images/PDFs/text and audits the vault, with a Tier-1 Python audit script and an opt-in repair loop.
 type: plan
-status: executing
+status: completed
 branch: feat/recipe-card-skill-pair
 related:
   - .designs/2026-04-29-recipe-card-skill-pair.design.md
