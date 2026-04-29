@@ -22,7 +22,7 @@ criteria; `repair-playbook.md` maps findings to fixes.
 
 Confirm the user wants an audit, not a build. If they want to:
 
-- *Add* a new card → route to `/build:build-recipe-card`.
+- *Add* a new card → route to `/build-recipe-card`.
 - *Re-cook* / consult an index → use `_index.md` directly.
 
 ## 2. Scope
@@ -125,6 +125,6 @@ repair.
 **Produces:** structured findings report; with opt-in, applied fixes
 (Tier-1) and proposed diffs (Tier-2/3).
 
-**Chainable to:** `/build:build-recipe-card` (rebuild a malformed
+**Chainable to:** `/build-recipe-card` (rebuild a malformed
 card from source); a follow-on plan that batches Tier-1 auto-fixes
 across the vault.

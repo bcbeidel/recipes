@@ -19,7 +19,7 @@ the workflow.
 
 Confirm the user wants to add a *new* recipe-card. If they want to:
 
-- *Audit* existing cards → route to `/build:check-recipe-card`.
+- *Audit* existing cards → route to `/check-recipe-card`.
 - *Edit* one existing card → use Edit on the file directly.
 - *Plan a meal* → consult `_index.md`; this skill does not produce
   meal plans.
@@ -128,7 +128,7 @@ python3 .claude/skills/check-recipe-card/scripts/audit_recipe_card.py \
 ```
 
 It should exit 0. If it exits 1, route the findings to
-`/build:check-recipe-card` for repair.
+`/check-recipe-card` for repair.
 
 ## Anti-Pattern Guards
 
@@ -151,7 +151,7 @@ context.
 **Produces:** One markdown file under the appropriate folder, audits
 clean under Tier-1.
 
-**Chainable to:** `/build:check-recipe-card` (single-file mode) for
-end-to-end validation; `/build:check-recipe-card --folder <folder>`
+**Chainable to:** `/check-recipe-card` (single-file mode) for
+end-to-end validation; `/check-recipe-card --folder <folder>`
 to confirm the new card hasn't broken any cross-vault constraint
 (alias / filename uniqueness).
