@@ -193,7 +193,9 @@ locations inside the cwd; that's expected and gets fixed in Task 2.
 - **Do not commit yet** — Task 2 relocates these files; the transient
   `plugins/` tree should never appear in version control.
 
-### Task 2 — Relocate to project-scoped paths and patch references
+### Task 2 — Relocate to project-scoped paths and patch references <!-- sha:f8dff5f -->
+
+**Status:** completed.
 
 **In-flight amendment:** `.claude/` was broadly gitignored
 (`.claude/`). Amended `.gitignore` to mirror the `.obsidian/` pattern
@@ -246,7 +248,11 @@ version control while `.claude/settings.local.json` stays local.
 - Commit: `feat: scaffold recipe-card skill pair via build-skill-pair
   and relocate to .claude/skills/`
 
-### Task 3 — Tier-1 Python audit script
+### Task 3 — Tier-1 Python audit script <!-- sha:24bbf4e -->
+
+**Status:** completed. Smoke test: `--folder dinner` → 96 findings
+across 100 cards (86 `description-not-first-ingredient`, exit 1).
+Clean fixture under `/tmp/` exits 0.
 
 - Write
   `.claude/skills/check-recipe-card/scripts/audit_recipe_card.py`.
@@ -268,7 +274,9 @@ version control while `.claude/settings.local.json` stays local.
     --help` prints usage.
 - Commit: `feat: add Tier-1 audit script for recipe-cards`
 
-### Task 4 — Wire RESOLVER.md and AGENTS.md
+### Task 4 — Wire RESOLVER.md and AGENTS.md <!-- sha:cd953af -->
+
+**Status:** completed.
 
 - In `RESOLVER.md`, append a note under the *Notes* section pointing
   out that new recipe filing goes through `/build:build-recipe-card`
@@ -281,7 +289,12 @@ version control while `.claude/settings.local.json` stays local.
   no existing lines removed.
 - Commit: `docs: register recipe-card skill pair in RESOLVER and AGENTS`
 
-### Task 5 — End-to-end validation: build half
+### Task 5 — End-to-end validation: build half <!-- sha:37dcb0e -->
+
+**Status:** completed. Source: Serious Eats *Basic Square Pan Pizza
+Dough* (PDF print provided by user; WebFetch was blocked). Card
+written to `basics/basic-square-pan-pizza-dough.md`; audits clean
+(exit 0, 0 findings).
 
 - Pick one well-cited URL not yet in the vault (the user provides it
   during execution; if not provided, skip and note as deferred).
@@ -298,7 +311,11 @@ version control while `.claude/settings.local.json` stays local.
   (skip commit if validation source not provided; document the skip
   in the plan's Validation section).
 
-### Task 6 — End-to-end validation: check half on the vault
+### Task 6 — End-to-end validation: check half on the vault <!-- sha:f14fe68 -->
+
+**Status:** completed. 167 files audited, 161 findings; 150
+description-bug findings (≥100 threshold cleared). Baseline summary
+at `.plans/2026-04-29-recipe-card-skill-pair.notes.md`.
 
 - Run the Tier-1 script across every recipe folder:
   `for d in dinner breakfast lunch sides desserts appetizers basics; do
